@@ -56,7 +56,6 @@
     login_user: "{{ mysql_user }}"
     login_password: "{{ mysql_root_password }}"
     login_unix_socket: /var/run/mysqld/mysqld.sock
-    host_all: yes
 
 - name: delete anonymous MySQL server user for localhost
   action: mysql_user user="" state="absent" login_user="{{ mysql_user }}" login_password="{{ mysql_root_password }}"
