@@ -46,6 +46,7 @@
     state: present
     login_user: "{{ mysql_user }}"
     login_password: "{{ mysql_root_password }}"
+    login_unix_socket: /var/run/mysqld/mysqld.sock
 - name: ensure pdns db user exists
   mysql_user:
     name: "{{ mysql_pdns_user }}"
